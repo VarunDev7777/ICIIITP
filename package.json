@@ -1,0 +1,32 @@
+{
+  "name": "iciip",
+  "version": "1.0.0",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js",
+    "watch": "sass --watch scss:assets/css",
+    "dev": "concurrently \"nodemon server.js\" \"npm run watch\""
+  },
+  "author": "Varun",
+  "license": "MIT",
+  "repository": "https://github.com/VarunDev7777/ICIIITP.git",
+  "description": "Conference ICIIP",
+  "dependencies": {
+    "concurrently": "^6.0.0",
+    "connect-mongo": "^4.4.1",
+    "dotenv": "^8.2.0",
+    "ejs": "^3.1.6",
+    "express": "^4.17.1",
+    "express-session": "^1.17.1",
+    "mongoose": "^5.12.3",
+    "sass": "^1.32.8"
+  },
+  "keywords": [
+    "heroku",
+    "icdam2"
+  ],
+  "engines": {
+    "node": "12.16.2"
+  }
+}
