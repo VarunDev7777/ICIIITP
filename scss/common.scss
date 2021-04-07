@@ -197,3 +197,9 @@ body {
         background-color: #fff;
     }
 }
+
+@media screen and (max-width: 1250px) {
+    body {
+        display: none;
+    }
+}
