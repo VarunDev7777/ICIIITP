@@ -400,476 +400,150 @@
   src: url("/assets/fonts/Roboto-medium.woff2") format("woff2");
   unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
 }
-.slider {
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  width: 100%;
-  background-attachment: fixed;
+.registration_container {
+  min-height: 80vh;
+  padding: 8rem 0 4rem 0;
   box-sizing: border-box;
-  padding: 6rem 0;
-}
-
-.sl_back {
-  position: absolute;
-  object-fit: cover;
-  object-position: center;
-  -o-object-fit: cover;
-  -o-object-position: center;
-  left: 0;
-  top: 0;
-  z-index: -1;
-  height: 100%;
-  width: 100%;
-}
-
-.content {
-  width: 70%;
+  width: 90%;
   margin: 0 auto;
-  height: 100%;
-  padding: 2rem;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  box-sizing: border-box;
-  color: #fff;
-}
-.content * {
-  text-transform: uppercase;
 }
 
-.first_headline {
-  user-select: none;
-  font-size: 3rem;
-  font-family: "Raleway";
-  font-weight: 300;
-}
-
-.second_headline {
-  user-select: none;
-  font-size: 3rem;
-  font-family: "Raleway";
-  font-weight: 800;
-  text-align: center;
-  margin: 2rem 0;
-  line-height: 4rem;
-  letter-spacing: 2px;
-}
-
-.horizontal {
-  border: none;
-  width: 40%;
-  height: 3px;
+.registration_details {
   background-color: #fff;
-}
-
-.conf_info {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 0.5rem 0;
-}
-.conf_info div {
-  margin: 0 1rem;
-  font-family: "Montserrat";
-  font-weight: bold;
-}
-
-.reg_btn {
-  margin-top: 2rem;
-  padding: 1rem 1.5rem;
-  color: #fff;
-  background-color: #F62B0A;
-  border: 2px solid #F62B0A;
-  border-radius: 0.4rem;
-  font-weight: bold;
-  letter-spacing: 2px;
-  font-family: "Raleway";
-  font-weight: 700;
-  font-size: 1rem;
-  box-sizing: border-box;
-  transition: color, background-color 0.3s ease-in-out;
-  cursor: pointer;
-}
-.reg_btn:hover {
-  color: #F62B0A;
-  background-color: #fff;
-}
-
-.ques_container {
+  border-radius: 10px;
   width: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 5rem 2rem;
+  font-size: 1.2rem;
+  padding: 1rem 2rem 3rem 2rem;
   box-sizing: border-box;
 }
-
-.ques_content {
-  height: 100%;
-  width: 20rem;
-  margin: 0 1rem;
-}
-
-.cnt_heading {
-  font-family: "Raleway";
-  font-style: normal;
-  font-weight: 600;
-  box-sizing: border-box;
-  padding-left: 1rem;
-  letter-spacing: 1px;
-  text-transform: uppercase;
-}
-
-.cnt_info {
-  color: #707070;
-  font-family: "Raleway";
-  font-size: 0.9rem;
-  line-height: 1.4rem;
-}
-
-.lnmore {
-  text-decoration: none;
-  color: #F62B0A;
-  font-family: "Droid Serif";
-  font-style: italic;
-  font-weight: 400;
-}
-
-.countdown_container {
-  background-image: url("/assets/jpgs/coutdown-bg1.jpg");
-  background-size: cover;
-  background-position: center center;
-  padding: 7rem 2rem;
-  box-sizing: border-box;
+.registration_details .Note {
+  margin: 1rem 0 0 0;
+  border-bottom: 1px solid #eeeeee;
+  padding-bottom: 1rem;
   width: 100%;
 }
-
-.countdown_boxes_container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-wrap: nowrap;
-}
-
-.countdown_box {
-  height: 8rem;
-  width: 10rem;
-  margin: 0 0.8rem;
-  color: #fff;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  font-family: "Montserrat";
-  font-weight: 600;
-  border-radius: 6px;
-}
-.countdown_box span {
-  font-size: 3rem;
-}
-
-.countdown_box:nth-child(1) {
-  background-color: #333333;
-}
-
-.countdown_box:nth-child(2) {
-  background-color: #333333dc;
-}
-
-.countdown_box:nth-child(3) {
-  background-color: #3333337c;
-}
-
-.countdown_box:nth-child(4) {
-  background-color: #33333350;
-}
-
-.cnt_cat {
-  font-weight: 400;
-  font-size: 1rem !important;
-  text-transform: uppercase;
-}
-
-.subscribe_updates {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  margin-top: 2rem;
-}
-.subscribe_updates h2 {
-  font-size: 1.3rem;
-  letter-spacing: 5px;
-  font-family: "Raleway";
-  text-transform: uppercase;
-}
-
-.sub_email {
-  margin-top: 1rem;
-}
-.sub_email input {
-  padding: 1.2rem 1.5rem;
-  font-family: "Montserrat";
-  font-size: 0.9rem;
-  outline: none;
-  color: #a1a1a1;
-  border: none;
-  box-sizing: border-box;
-  width: 30rem;
-}
-.sub_email input::placeholder {
-  color: #a1a1a1;
-}
-
-.sub_btn {
-  padding: 1.2rem 1.5rem;
-  box-sizing: border-box;
-  cursor: pointer;
-  font-size: 0.9rem;
-  text-transform: uppercase;
-  color: #fff;
-  margin-left: 1rem;
-  background-color: #F62B0A;
-  font-family: "Montserrat";
-  font-weight: bold;
-  letter-spacing: 1px;
-  border-width: 0 0 5px 0;
-  border-color: #af220d;
-  border-style: solid;
-}
-
-.speakers_section {
-  background-color: #F3F3F3;
-  padding: 5rem 2rem;
-  box-sizing: border-box;
-  font-family: "Roboto";
-  font-weight: 500;
-}
-
-.section_head {
-  width: 60%;
-  margin: 0 auto;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-.section_head h1 {
-  color: #000;
-  letter-spacing: 5px;
-  text-transform: uppercase;
-}
-
-.slide_controller {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: max-content;
-  height: max-content;
-}
-
-.cnt-lft,
-.cnt-rgt {
-  height: 2rem;
-  width: 2rem;
-  border-radius: 3px;
-  border: none;
-  display: flex;
-  justify-content: center;
-  cursor: pointer;
-  align-items: center;
-  background-color: #F62B0A;
-  margin: 0 0.1rem;
-}
-.cnt-lft img,
-.cnt-rgt img {
-  height: 50%;
-  width: 50%;
-  filter: brightness(0) invert(1);
-}
-
-.speaker_card_container {
-  width: 60%;
-  margin: 1rem auto;
-  overflow: hidden;
-  display: flex;
-  justify-content: flex-start;
-  align-items: center;
-}
-
-.speaker_card {
-  min-width: 15.5rem;
-  height: 18rem;
-  margin: 0 1rem;
-}
-.speaker_card:nth-child(1) {
-  margin-left: 0;
-  margin-right: 1rem;
-}
-
-.speaker_image {
-  height: 65%;
-  width: 100%;
-  overflow: hidden;
-  border-radius: 6px;
-  position: relative;
-  overflow: hidden;
-}
-.speaker_image img {
-  height: 100%;
-  width: 100%;
-}
-.speaker_image .mask {
-  height: 100%;
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  background-color: #f62a0a8c;
-  opacity: 0;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  transition: 0.4s all ease-in-out;
-}
-.speaker_image .mask img {
-  height: 2.2rem;
-  width: 2.2rem;
-  margin: 0 1rem;
-  transition: 0.2s all ease;
-  cursor: pointer;
-  filter: invert(1);
-}
-.speaker_image:hover .mask {
-  opacity: 1;
-  transform: scale(1);
-}
-.speaker_image:hover .mask img {
-  height: 2rem;
-  width: 2rem;
-}
-
-.speaker_name {
-  font-family: "Raleway";
-  font-size: 0.9rem;
-  font-style: normal;
-  font-weight: 700;
-  color: #000;
-  letter-spacing: 2px;
-  text-transform: uppercase;
-  text-align: center;
-  margin: 2rem 0 0.8rem 0;
-}
-
-.speaker_designation {
-  font-family: "Droid-Serif";
-  font-style: italic;
-  color: #707070;
-  text-align: center;
-  margin: 0.7rem 0;
-}
-
-.location_container {
-  background-color: #F3F3F3;
-  font-family: "Montserrat";
-  text-transform: uppercase;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-.location_container h1 {
-  margin-top: 0;
-  margin-bottom: 1rem;
-  margin-left: 5rem;
-  width: 63%;
-  font-family: "Roboto";
-  letter-spacing: 5px;
-}
-.location_container h2 {
-  letter-spacing: 5px;
-}
-
-.mapouter {
-  position: relative;
-  text-align: right;
-  height: 500px;
-  width: 100%;
-}
-
-.gmap_canvas {
-  overflow: hidden;
-  background: none !important;
-  height: 500px;
-  width: 100%;
-}
-
-.location_div {
-  background-image: url("/assets/jpgs/location-bg.jpg");
-  width: 100%;
-  height: 600px;
-  background-size: cover;
-  background-position: center center;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  color: #fff;
-  flex-direction: column;
-}
-.location_div h1 {
-  width: max-content;
-  text-align: center;
-  margin: 0 0 4rem 0;
-  font-family: "Montserrat";
-}
-
-.address,
-.contact_no,
-.email {
-  display: flex;
-}
-.address span img:nth-child(1),
-.contact_no span img:nth-child(1),
-.email span img:nth-child(1) {
-  height: 1.2rem;
-  width: 1.2rem;
-  filter: invert(1);
-}
-.address span,
-.contact_no span,
-.email span {
-  margin: 0 0.5rem;
-  text-transform: lowercase;
-}
-
-.address span {
-  text-transform: capitalize;
-}
-
-.ckeck {
-  color: red;
-  font-size: 1rem;
+.registration_details p {
   margin: 1rem 0;
-  letter-spacing: 1px;
-  text-transform: capitalize;
+  padding: 0;
+  text-align: justify;
+  line-height: 2rem;
+  box-sizing: border-box;
 }
-
-.horizontal-2 {
-  border: none;
-  height: 2px;
-  width: 20%;
-  background-color: #fff;
+.registration_details .author_reg_fees {
+  list-style: decimal;
+  padding: 0 1rem;
+  box-sizing: border-box;
+  line-height: 2rem;
 }
-
-.contact_info {
+.registration_details .bank_details_icdam {
+  margin: 0 auto;
+  border: 5px solid #005499;
+  box-sizing: border-box;
+  border-radius: 10px;
+}
+.registration_details .bank_details_icdam h3 {
+  width: max-content;
+  margin: 2rem auto 1rem auto;
+}
+.registration_details .bank_details_icdam .bank_detaillist {
+  padding: 0;
+  list-style: none;
+  width: 90%;
+  margin: 0 auto 4rem auto;
+  border: 3px solid #e1e1e1;
+  overflow: hidden;
+  border-radius: 5px;
+}
+.registration_details .bank_details_icdam .bank_detaillist li {
   display: flex;
-  margin-top: 0rem;
+  border-bottom: 3px solid #e1e1e1;
+  box-sizing: border-box;
+  transition: 0.3s;
 }
-.contact_info div {
-  margin: 0 0.5rem;
+.registration_details .bank_details_icdam .bank_detaillist li:last-child {
+  border-bottom: none;
+}
+.registration_details .bank_details_icdam .bank_detaillist li div {
+  padding: 1rem;
+  box-sizing: border-box;
+  font-family: "Raleway";
+}
+.registration_details .bank_details_icdam .bank_detaillist li .detail_name {
+  font-weight: bold;
+  color: #005499;
+  border-right: 3px solid #e1e1e1;
+  width: 50%;
+}
+.registration_details .bank_details_icdam .bank_detaillist li:hover {
+  background-color: #e1e1e140;
 }
 
-/*# sourceMappingURL=index.css.map */
+.head_center {
+  width: max-content;
+  margin: 2rem auto;
+}
+
+.fee_structure .fee_struc_table {
+  margin: 0 auto;
+  border: 5px solid #005499;
+  box-sizing: border-box;
+  border-radius: 10px;
+  display: flex;
+}
+.fee_structure .fee_struc_table ul {
+  padding: 0;
+  margin: 4rem auto;
+  list-style: none;
+  width: 90%;
+  border: 3px solid #e1e1e1;
+  overflow: hidden;
+  border-radius: 5px;
+}
+.fee_structure .fee_struc_table ul li {
+  display: flex;
+  border-bottom: 3px solid #e1e1e1;
+  box-sizing: border-box;
+  transition: 0.3s;
+}
+.fee_structure .fee_struc_table ul li:last-child {
+  border-bottom: none;
+}
+.fee_structure .fee_struc_table ul li div {
+  padding: 1rem;
+  box-sizing: border-box;
+  font-family: "Raleway";
+}
+.fee_structure .fee_struc_table ul li .fee_category,
+.fee_structure .fee_struc_table ul li .early_reg_fee {
+  border-right: 3px solid #e1e1e1;
+  width: 33%;
+}
+.fee_structure .fee_struc_table ul li .table_heading {
+  font-weight: bold;
+}
+.fee_structure .fee_struc_table ul li:hover {
+  background-color: #e1e1e140;
+}
+
+.ml6 {
+  width: max-content;
+  margin: 2rem auto 0 auto;
+  color: #005499;
+  position: relative;
+  font-size: 2em;
+  font-family: "Raleway";
+}
+.ml6 .text-wrapper {
+  position: relative;
+  display: inline-block;
+  padding-top: 0.2em;
+  padding-right: 0.05em;
+  padding-bottom: 0.1em;
+  overflow: hidden;
+}
+.ml6 .letter {
+  line-height: 1em;
+  display: inline-block;
+}
+
+/*# sourceMappingURL=register.css.map */

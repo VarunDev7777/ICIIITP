@@ -26,6 +26,12 @@ tl.from(".conf_info div", {
     duration: 0.1,
     stagger: 0.2
 })
+tl.from(".reg_btn", {
+    autoAlpha: 0,
+    transform: 'scale(1.2)',
+    duration: 0.5,
+    delay: 0.5
+})
 
 let countdownDate = new Date("Aug 28, 2021 00:00:00").getTime();
 
@@ -68,7 +74,7 @@ _left.addEventListener("click", function() {
 _right.addEventListener("click", function() {
     scrollView.scrollTo({
         top: 0,
-        left: scrollView.scrollWidth,
+        left: scrollView.clientWidth,
         behavior: 'smooth'
     })
 })

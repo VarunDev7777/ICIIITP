@@ -1,0 +1,33 @@
+@import './_fonts.scss';
+.about_conf_container,
+.about_ipr,
+.about_patents,
+.about_uni,
+.about_universalinovators {
+    width: 60%;
+    margin: 3rem auto;
+    h1 {
+        font-size: 2rem;
+        text-transform: uppercase;
+        background-color: red;
+        /* Create the gradient. */
+        background-image: linear-gradient(45deg, #af4261, #008000);
+        /* Set the background size and repeat properties. */
+        background-size: 100%;
+        background-repeat: repeat;
+        /* Use the text as a mask for the background. */
+        /* This will show the gradient as a text color rather than element bg. */
+        background-clip: text;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        -moz-background-clip: text;
+        -moz-text-fill-color: transparent;
+    }
+    p {
+        line-height: 1.5rem;
+    }
+    h2 {
+        color: #707070;
+        text-transform: capitalize;
+    }
+}

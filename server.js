@@ -12,31 +12,6 @@ require("dotenv").config();
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
-// Mongoose Initialised
-// const mongoose = require('mongoose')
-// mongoose.connect(process.env.MONGO_URI, {
-//     useNewUrlParser: !0,
-//     useUnifiedTopology: !0,
-//     useCreateIndex: 1,
-// }).then(() => {
-//     console.log("MONGO CONNECTION SUCCESSFUL")
-// }).catch(() => {
-//     console.log("MONGO ERROR")
-// })
-
-//Express-Session Config
-// const session = require("express-session");
-// const MongoStore = require("connect-mongo");
-// app.use(
-//     session({
-//         secret: process.env.SECRET,
-//         resave: true,
-//         saveUninitialized: false,
-//         store: MongoStore.create({ mongoUrl: process.env.MONGO_URI }),
-//         cookie: { maxAge: 180 * 60 * 1000 },
-//     })
-// );
-
 app.use("/", require("./routes/routes"));
 
 const PORT = process.env.PORT || 8080;
