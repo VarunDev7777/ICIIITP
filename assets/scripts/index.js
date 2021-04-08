@@ -35,7 +35,7 @@ tl.from(".reg_btn", {
 
 let countdownDate = new Date("Aug 28, 2021 00:00:00").getTime();
 
-let countdown = setInterval(function() {
+let countdown = setInterval(function () {
     let now = new Date().getTime();
     let timeleft = countdownDate - now;
 
@@ -60,21 +60,22 @@ let countdown = setInterval(function() {
 
 // slider
 let scrollView = document.querySelector(".speaker_card_container")
+let partnerView = document.querySelector(".speaker_card")
 let _ = document.querySelector(".slide_controller")
 let _left = _.children[0]
 let _right = _.children[1]
 
-_left.addEventListener("click", function() {
-    scrollView.scrollTo({
+_left.addEventListener("click", function () {
+    scrollView.scrollBy({
         top: 0,
-        left: 0,
+        left: -(partnerView.clientWidth + 32),
         behavior: 'smooth'
     })
 })
-_right.addEventListener("click", function() {
-    scrollView.scrollTo({
+_right.addEventListener("click", function () {
+    scrollView.scrollBy({
         top: 0,
-        left: scrollView.clientWidth,
+        left: partnerView.clientWidth + 32,
         behavior: 'smooth'
     })
 })

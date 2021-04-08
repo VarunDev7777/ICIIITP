@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ICIIP - Contact Us</title>
+    <link rel="stylesheet" href="/assets/css/common.css">
+    <link rel="stylesheet" href="/assets/css/contact.css">
+</head>
+
+<body>
+    <div class="contact_container">
+        <!-- header -->
+        <%- include("./Components/header.ejs") %>
+            <!-- header -->
+            <div class="page-title">
+                <h1>Contact Us</h1>
+                <h3>We would love to get in touch with you!!</h3>
+            </div>
+
+            <div class="contact_form_container">
+                <form method="POST">
+                    <label for="fname">First Name</label>
+                    <input type="text" name="fname"
+                        placeholder="please tell us your name so we can address you properly" />
+                    <label for="lname">Last Name</label>
+                    <input type="text" name="lname" placeholder="Its your choice, Its just to gain data" />
+                    <label for="email">Email</label>
+                    <input type="email" name="email"
+                        placeholder="Well, This one is important,because we have to answer you back" />
+                    <label for="subject">Subject</label>
+                    <input type="text" name="subject" placeholder="This is just to understand the topic of query" />
+                    <label for="message">Message</label>
+                    <textarea name="message"
+                        placeholder="You can talk to us here, but be careful because we are talkitive!!!"
+                        cols="30"></textarea>
+                    <button class="chk_btn" type="submit">Submit</button>
+                </form>
+            </div>
+
+            <%- include("./Components/footer.ejs") %>
+                <script type="module" src="/assets/scripts/commonjs.js"></script>
+    </div>
+</body>
+
+</html>

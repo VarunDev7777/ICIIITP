@@ -400,6 +400,10 @@
   src: url("/assets/fonts/Roboto-medium.woff2") format("woff2");
   unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
 }
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   margin: 0;
   font-family: "Montserrat";
@@ -412,11 +416,61 @@ body {
 
 .main_header {
   display: flex;
-  width: 50%;
+  width: 1100px;
   padding: 2rem 0;
   margin: 0 auto;
   box-sizing: border-box;
   justify-content: space-between;
+}
+@media (max-width: 575px) {
+  .main_header {
+    display: none;
+  }
+}
+
+.mob_main_header {
+  display: flex;
+  width: 90%;
+  margin: 0 auto;
+  box-sizing: border-box;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2rem 0;
+}
+.mob_main_header .ham_container {
+  outline: none;
+}
+.mob_main_header .ham_container .ham {
+  height: 5px;
+  width: 40px;
+  background-color: #000;
+  margin: 0.3rem 0;
+  transition: 0.4s ease;
+}
+.mob_main_header .link_container {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  z-index: 100;
+  background-color: #444444;
+  top: -100vh;
+  opacity: 0;
+  visibility: hidden;
+  transition: 0.5s ease;
+  left: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.mob_main_header .link_container li {
+  font-size: 10vw;
+  margin: 1rem 0;
+}
+@media (min-width: 576px) {
+  .mob_main_header {
+    display: none;
+  }
 }
 
 .logo_container {
@@ -487,9 +541,19 @@ body {
 .page-title h1,
 .page-title h3 {
   margin: 0;
+  text-align: center;
 }
 .page-title h1 {
   font-size: 6rem;
+  text-align: center;
+}
+@media (max-width: 400px) {
+  .page-title h1 {
+    font-size: 4rem;
+  }
+  .page-title h3 {
+    font-size: 0.8rem;
+  }
 }
 
 .footer_wrapper {
@@ -499,6 +563,13 @@ body {
   justify-content: center;
   padding: 4rem 10rem;
   font-family: "Montserrat";
+}
+@media (max-width: 575px) {
+  .footer_wrapper {
+    flex-direction: column;
+    padding: 3rem 0;
+    align-items: center;
+  }
 }
 
 .about_us,
@@ -516,9 +587,46 @@ body {
   letter-spacing: 1px;
   font-family: "Raleway";
 }
+@media (max-width: 575px) {
+  .about_us h2,
+.recent_news h2,
+.getyourself_listed h2 {
+    text-align: center;
+  }
+}
+@media (max-width: 575px) {
+  .about_us,
+.recent_news,
+.getyourself_listed {
+    margin: 1rem 0;
+  }
+  .about_us *,
+.recent_news *,
+.getyourself_listed * {
+    text-align: center;
+  }
+}
+
+@media (max-width: 575px) {
+  .getyourself_listed {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .getyourself_listed button {
+    width: 100%;
+    margin-top: 1rem !important;
+  }
+}
 
 .about_us {
   margin-right: 10rem;
+}
+@media (max-width: 575px) {
+  .about_us {
+    margin: 0;
+  }
 }
 
 .about_us p {
@@ -536,6 +644,15 @@ body {
 .recent_news ul li {
   color: #707070;
   margin: 0.8rem 0;
+}
+@media (max-width: 575px) {
+  .recent_news {
+    margin: 0;
+  }
+  .recent_news ul li {
+    width: max-content;
+    margin: 0 auto;
+  }
 }
 
 .getyourself_listed button {
@@ -570,6 +687,31 @@ body {
 }
 .copyright div ul li:hover {
   color: #fff;
+}
+.copyright div ul li a {
+  color: inherit;
+  text-decoration: none;
+}
+@media (max-width: 575px) {
+  .copyright div ul {
+    flex-direction: column;
+    padding: 0;
+  }
+  .copyright div ul li {
+    border: none;
+    font-size: 1.1rem;
+    margin: 0.5rem 0;
+    padding-right: 0;
+  }
+}
+@media (max-width: 575px) {
+  .copyright {
+    flex-direction: column-reverse;
+    justify-content: center;
+    align-items: center;
+    height: max-content;
+    padding: 1rem 0 2rem 0;
+  }
 }
 
 .chk_btn {

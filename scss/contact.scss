@@ -1,0 +1,49 @@
+@import './_fonts.scss';
+@import './config';
+body{
+    background-color: #f5f5f5;
+}
+
+.contact_form_container{
+    width: 1100px;
+    margin: 2rem auto;
+    form{
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: center;
+        label{
+            width: max-content;
+            margin: 2rem 0 0.5rem 0;
+            color: #000;
+            font-size: 1.2rem;
+        }
+        input,textarea{
+            width: 100%;
+            padding: 1rem 2rem;
+            box-sizing: border-box;
+            color: #444444;
+            border-radius: 5px;
+            border: 1px solid #e1e1e1;
+            font-size: 1.2rem;
+            font-family: 'Montserrat';
+        }
+        textarea{
+            min-height: 200px;
+        }
+        @include media("<=xs"){
+            width: 90%;
+            margin: 0 auto;
+            input,textarea{
+                font-size: 1rem;
+                padding: 1rem;
+                &::placeholder{
+                    font-size: 0.9rem;
+                }
+            }
+        }
+    }
+    @include media("<=xs"){
+        width: 100%;
+    }
+}

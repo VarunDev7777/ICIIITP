@@ -8,5 +8,6 @@ Router.get("/about/", HomeControl.getAbout);
 Router.get("/call-for-paper/", HomeControl.getcallForPapers);
 Router.get("/register/", HomeControl.getRegister);
 Router.get("/venue/", HomeControl.getVenue);
+Router.get("/contact-us/", HomeControl.getContact);
 
 module.exports = Router;

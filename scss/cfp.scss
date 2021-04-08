@@ -1,4 +1,5 @@
 @import './_fonts.scss';
+@import './config';
 :root {
     counter-reset: list;
 }
@@ -20,6 +21,9 @@ body {
     p {
         line-height: 1.5rem
     }
+    @include media("<=xs"){
+        margin: 2rem auto;
+    }
 }
 
 .call_topic {
@@ -27,6 +31,9 @@ body {
         font-size: 2.2rem;
         text-transform: uppercase;
         color: #0d61c0;
+        @include media("<=xs"){
+            font-size: 1.5rem;
+        }
     }
     ul {
         list-style: none;
@@ -41,6 +48,10 @@ body {
                 position: absolute;
                 content: "(" counter(list) ")";
                 left: -2.5rem;
+            }
+            @include media("<=xs"){
+                width: 100%;
+                text-overflow: clip;
             }
         }
     }

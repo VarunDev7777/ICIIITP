@@ -400,91 +400,56 @@
   src: url("/assets/fonts/Roboto-medium.woff2") format("woff2");
   unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
 }
-.about_conf_container,
-.about_ipr,
-.about_patents,
-.about_uni,
-.about_universalinovators {
-  width: 1200px;
-  margin: 3rem auto;
+body {
+  background-color: #f5f5f5;
 }
-.about_conf_container h1,
-.about_ipr h1,
-.about_patents h1,
-.about_uni h1,
-.about_universalinovators h1 {
-  font-size: 2rem;
-  text-transform: uppercase;
-  background-color: red;
-  /* Create the gradient. */
-  background-image: linear-gradient(45deg, #af4261, #008000);
-  /* Set the background size and repeat properties. */
-  background-size: 100%;
-  background-repeat: repeat;
-  /* Use the text as a mask for the background. */
-  /* This will show the gradient as a text color rather than element bg. */
-  background-clip: text;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  -moz-background-clip: text;
-  -moz-text-fill-color: transparent;
+
+.contact_form_container {
+  width: 1100px;
+  margin: 2rem auto;
 }
-.about_conf_container p,
-.about_ipr p,
-.about_patents p,
-.about_uni p,
-.about_universalinovators p {
-  line-height: 2vw;
-  font-size: 1rem;
+.contact_form_container form {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
 }
-.about_conf_container h2,
-.about_ipr h2,
-.about_patents h2,
-.about_uni h2,
-.about_universalinovators h2 {
-  color: #707070;
-  text-transform: capitalize;
+.contact_form_container form label {
+  width: max-content;
+  margin: 2rem 0 0.5rem 0;
+  color: #000;
+  font-size: 1.2rem;
 }
-@media (max-width: 575px) and (min-width: 401px) {
-  .about_conf_container,
-.about_ipr,
-.about_patents,
-.about_uni,
-.about_universalinovators {
-    width: 90vw;
-    margin: 2rem auto;
+.contact_form_container form input, .contact_form_container form textarea {
+  width: 100%;
+  padding: 1rem 2rem;
+  box-sizing: border-box;
+  color: #444444;
+  border-radius: 5px;
+  border: 1px solid #e1e1e1;
+  font-size: 1.2rem;
+  font-family: "Montserrat";
+}
+.contact_form_container form textarea {
+  min-height: 200px;
+}
+@media (max-width: 575px) {
+  .contact_form_container form {
+    width: 90%;
+    margin: 0 auto;
   }
-  .about_conf_container p,
-.about_ipr p,
-.about_patents p,
-.about_uni p,
-.about_universalinovators p {
-    line-height: 6vw;
+  .contact_form_container form input, .contact_form_container form textarea {
+    font-size: 1rem;
+    padding: 1rem;
+  }
+  .contact_form_container form input::placeholder, .contact_form_container form textarea::placeholder {
+    font-size: 0.9rem;
   }
 }
-@media (max-width: 400px) {
-  .about_conf_container,
-.about_ipr,
-.about_patents,
-.about_uni,
-.about_universalinovators {
-    width: 90vw;
-    margin: 2rem auto;
-  }
-  .about_conf_container h1,
-.about_ipr h1,
-.about_patents h1,
-.about_uni h1,
-.about_universalinovators h1 {
-    font-size: 1.5rem;
-  }
-  .about_conf_container p,
-.about_ipr p,
-.about_patents p,
-.about_uni p,
-.about_universalinovators p {
-    line-height: 8vw;
+@media (max-width: 575px) {
+  .contact_form_container {
+    width: 100%;
   }
 }
 
-/*# sourceMappingURL=about.css.map */
+/*# sourceMappingURL=contact.css.map */

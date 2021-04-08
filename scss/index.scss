@@ -1,4 +1,6 @@
 @import './_fonts.scss';
+@import './config';
+
 .slider {
     position: relative;
     display: flex;
@@ -38,6 +40,10 @@
     * {
         text-transform: uppercase;
     }
+    @include media("<=xs"){
+        width: 100%;
+        padding: 2rem 1rem;
+    }
 }
 
 .first_headline {
@@ -45,6 +51,9 @@
     font-size: 3rem;
     font-family: 'Raleway';
     font-weight: 300;
+    @include media("<=xs"){
+        font-size: 5vw;
+    }
 }
 
 .second_headline {
@@ -56,13 +65,20 @@
     margin: 2rem 0;
     line-height: 4rem;
     letter-spacing: 2px;
+    @include media("<=xs"){
+        font-size: 6vw;
+        line-height: 8vw;
+    }
 }
 
 .horizontal {
     border: none;
-    width: 40%;
+    width: 450px;
     height: 3px;
     background-color: #fff;
+    @include media("<=xs"){
+        width: 90%;
+    }
 }
 
 .conf_info {
@@ -74,6 +90,13 @@
         margin: 0 1rem;
         font-family: 'Montserrat';
         font-weight: bold;
+        @include media("<=xs"){
+            font-size: 0.8rem;
+            margin: 0 0.5rem;
+        }
+        @include media("<=400px"){
+            text-align: center;
+        }
     }
 }
 
@@ -96,6 +119,10 @@
         color: #F62B0A;
         background-color: #fff;
     }
+    a{
+        color: inherit;
+        text-decoration: none;
+    }
 }
 
 .ques_container {
@@ -105,12 +132,20 @@
     align-items: center;
     padding: 5rem 2rem;
     box-sizing: border-box;
+    @include media("<=xs"){
+        flex-direction: column;
+        padding: 2rem 0;
+    }
 }
 
 .ques_content {
     height: 100%;
     width: 20rem;
     margin: 0 1rem;
+    @include media("<=xs"){
+        margin: 2rem 0;
+        width: 90vw;
+    }
 }
 
 .cnt_heading {
@@ -145,6 +180,9 @@
     padding: 7rem 2rem;
     box-sizing: border-box;
     width: 100%;
+    @include media("<=xs"){
+        padding: 5rem 0;
+    }
 }
 
 .countdown_boxes_container {
@@ -152,6 +190,9 @@
     justify-content: center;
     align-items: center;
     flex-wrap: nowrap;
+    @include media("<=xs"){
+        flex-wrap: wrap;
+    }
 }
 
 .countdown_box {
@@ -168,6 +209,11 @@
     border-radius: 6px;
     span {
         font-size: 3rem;
+    }
+    @include media("<=xs"){
+        width: 35vw;
+        height: 35vw;
+        margin: 1rem;
     }
 }
 
@@ -204,6 +250,9 @@
         letter-spacing: 5px;
         font-family: 'Raleway';
         text-transform: uppercase;
+        @include media("<=xs"){
+            text-align: center;
+        }
     }
 }
 
@@ -221,6 +270,14 @@
         &::placeholder {
             color: #a1a1a1;
         }
+        @include media("<=xs"){
+            width: 90vw;
+        }
+    }
+    @include media("<=xs"){
+        display: flex;
+        flex-direction: column;
+        align-items: center;
     }
 }
 
@@ -239,6 +296,9 @@
     border-width: 0 0 5px 0;
     border-color: #af220d;
     border-style: solid;
+    @include media("<=xs"){
+        margin-top: 1rem;
+    }
 }
 
 // spekers section
@@ -248,10 +308,13 @@
     box-sizing: border-box;
     font-family: 'Roboto';
     font-weight: 500;
+    @include media("<=xs"){
+        padding: 5rem 0;
+    }
 }
 
 .section_head {
-    width: 60%;
+    width: 1100px;
     margin: 0 auto;
     display: flex;
     justify-content: space-between;
@@ -260,6 +323,9 @@
         color: #000;
         letter-spacing: 5px;
         text-transform: uppercase;
+    }
+    @include media("<=xs"){
+        width: 95vw;
     }
 }
 
@@ -291,12 +357,15 @@
 }
 
 .speaker_card_container {
-    width: 60%;
+    width: 1100px;
     margin: 1rem auto;
     overflow: hidden;
     display: flex;
     justify-content: flex-start;
     align-items: center;
+    @include media("<=xs"){
+        width: 95vw;
+    }
 }
 
 .speaker_card {
@@ -373,6 +442,37 @@
     margin: 0.7rem 0;
 }
 
+// important dates
+.important_dates_container{
+    margin: 3rem auto 5rem auto;
+    width: max-content;
+    .section_head{
+        h1{
+            text-align: center;
+        }
+    }
+}
+.imp_date{
+    margin: 1rem auto;
+    width: 1100px;
+    display: flex;
+    justify-content: space-between;
+    span{
+        font-size: 1.5rem;
+    }
+    @include media("<=xs"){
+        width: 95vw;
+        flex-direction: column;
+        span{
+            font-size: 1rem;
+            margin: 0.5rem 0;
+            &:nth-child(1){
+                font-weight: bold;
+            }
+        }
+    }
+}
+
 // loaction container
 .location_container {
     background-color: #F3F3F3;
@@ -392,6 +492,10 @@
     }
     h2 {
         letter-spacing: 5px;
+        @include media("<=xs"){
+            font-size: 5vw;
+            text-align: center;
+        }
     }
 }
 
@@ -425,6 +529,13 @@
         text-align: center;
         margin: 0 0 4rem 0;
         font-family: 'Montserrat';
+        @include media("<=xs"){
+            margin: 2rem auto;
+        }
+    }
+    @include media("<=xs"){
+        height: max-content;
+        padding: 4rem 0;
     }
 }
 
@@ -442,6 +553,12 @@
     span {
         margin: 0 0.5rem;
         text-transform: lowercase;
+    }
+    @include media("<=xs"){
+        justify-content: center;
+        span{
+            text-align: center;
+        }
     }
 }
 
@@ -464,6 +581,9 @@
     height: 2px;
     width: 20%;
     background-color: #fff;
+    @include media('<=xs'){
+        width: 200px;
+    }
 }
 
 .contact_info {
@@ -471,5 +591,8 @@
     margin-top: 0rem;
     div {
         margin: 0 .5rem;
+    }
+    @include media("<=xs"){
+        flex-direction: column;
     }
 }

@@ -1,22 +1,20 @@
 module.exports = {
     getHome: (req, res) => {
-        const attemptedRequest = req.query.attemptedRequest || null;
-        res.render("index", { attemptedRequest: attemptedRequest });
+        res.render("index")
     },
     getcallForPapers: (req, res) => {
-        const attemptedRequest = req.query.attemptedRequest || null;
-        res.render("callforpapers", { attemptedRequest: attemptedRequest });
+        res.render("callforpapers")
     },
     getRegister: (req, res) => {
-        const attemptedRequest = req.query.attemptedRequest || null;
-        res.render("register", { attemptedRequest: attemptedRequest });
+        res.render("register")
     },
     getAbout: (req, res) => {
-        const attemptedRequest = req.query.attemptedRequest || null;
-        res.render("about", { attemptedRequest: attemptedRequest });
+        res.render("about")
     },
     getVenue: (req, res) => {
-        const attemptedRequest = req.query.attemptedRequest || null;
-        res.render("venue", { attemptedRequest: attemptedRequest });
+        res.render("venue")
+    },
+    getContact: (req, res) => {
+        res.render("contact")
     }
 }

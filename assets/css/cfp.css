@@ -422,11 +422,21 @@ body {
 .content_container p {
   line-height: 1.5rem;
 }
+@media (max-width: 575px) {
+  .content_container {
+    margin: 2rem auto;
+  }
+}
 
 .call_topic h2 {
   font-size: 2.2rem;
   text-transform: uppercase;
   color: #0d61c0;
+}
+@media (max-width: 575px) {
+  .call_topic h2 {
+    font-size: 1.5rem;
+  }
 }
 .call_topic ul {
   list-style: none;
@@ -443,6 +453,12 @@ body {
   position: absolute;
   content: "(" counter(list) ")";
   left: -2.5rem;
+}
+@media (max-width: 575px) {
+  .call_topic ul li {
+    width: 100%;
+    text-overflow: clip;
+  }
 }
 
 /*# sourceMappingURL=cfp.css.map */
