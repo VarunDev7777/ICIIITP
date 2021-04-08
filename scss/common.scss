@@ -317,8 +317,8 @@ body {
     }
 }
 
-// @media screen and (max-width: 1250px) {
-//     body {
-//         display: none;
-//     }
-// }
+@include media(">=xs","<1250px"){
+    body{
+        display: none;
+    }
+}
